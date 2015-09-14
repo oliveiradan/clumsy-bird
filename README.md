@@ -44,4 +44,4 @@ See [CUSTOMIZING](https://github.com/ellisonleao/clumsy-bird/blob/gh-pages/CUSTO
 
 If you made something with this code, please [share here](https://github.com/ellisonleao/clumsy-bird/wiki/Games-using-clumsy-bird-code) and i'll be happy to add your game into the list.
 
-Some thoughts about this code you can find on [my blog post](https://medium.com/@ellisonleao/clumsy-bird-an-open-source-flappy-bird-clone-cf615724730f)
+Some thoughts about this code you can find on [my blog post](https://medium.com/@ellisonleao/clumsy-bird-an-open-source-flappy-bird-clone-cf615724730f).
