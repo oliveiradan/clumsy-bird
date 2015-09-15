@@ -38,9 +38,9 @@ Click on the Select button to the right of this service. Shipped pops up the Ser
 
 This form allow us to specify:
 
- *Name of GitHub Repository:	The name of the GitHub repository where Shipped stores the source code using this service. Shipped automatically creates the repository if necessary
- *GitHub Organization:	The GitHub account owning the repository. This can be your personal account, or the account of a company or organization associated with your account.
- *Private Public	The type of repository to create: private (available only to specific GitHub users) or public (viewable by any web user). You need a paid GitHub account to create a private repository.
+##### Name of GitHub Repository:	The name of the GitHub repository where Shipped stores the source code using this service. Shipped automatically creates the repository if necessary
+##### GitHub Organization:	The GitHub account owning the repository. This can be your personal account, or the account of a company or organization associated with your account.
+#####  Private Public	The type of repository to create: private (available only to specific GitHub users) or public (viewable by any web user). You need a paid GitHub account to create a private repository.
  
  Specify "clumsy-bird" for the repository name and press Add Service. Shipped re-displays the Compose Your Project form with the repository name for the selected service above the Build Project button.
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildproject.png)
@@ -57,9 +57,9 @@ Bootstrapping a Shipped project means downloading the project's source code to y
 
 The bootstrap process runs in a command-line terminal window, so the first step in bootstrapping your project is opening a terminal window. The way you do this depends on your operating system:
 
-*OS X (Mac):	Press Command + Space to open Spotlight Search. Type Terminal and double-click the Terminal Application. Menu option Shell -> New Window will open a new window for you.
-* Ubuntu:	Press Ctrl+Alt+T
-* Windows:	Click Start, type "cmd", and press Enter for a normal terminal window, or Ctrl+Shift+Enter for an Administrator terminal window. You will need an Administrator window if the bootstrap process needs to install Vagrant and VirtualBox. If you already have this software installed, you can use a normal terminal window.
+##### OS X (Mac):	Press Command + Space to open Spotlight Search. Type Terminal and double-click the Terminal Application. Menu option Shell -> New Window will open a new window for you.
+##### Ubuntu:	Press Ctrl+Alt+T
+#####  Windows:	Click Start, type "cmd", and press Enter for a normal terminal window, or Ctrl+Shift+Enter for an Administrator terminal window. You will need an Administrator window if the bootstrap process needs to install Vagrant and VirtualBox. If you already have this software installed, you can use a normal terminal window.
 
 
 
@@ -101,7 +101,7 @@ Create a new Environment as
 
 
 Shipped shows the message "Deploying to environment..." under the environment name. please click on that , and a short time later replaces it with a "Deployed successfully" message:
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/v.png)
+![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/deploy.png)
 
 
 Congratulations! You've deployed your clumsy-bird application to the cloud. Click on the URL in the "Deployed successfully" message to see the application running in its new environment
