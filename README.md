@@ -1,47 +1,35 @@
 Clumsy Bird
 ===========
 
-A MelonJS made "Flappy Bird" clone.
+This is an sample project to demonstrate how to create/deploy a Node JS application using Shipped interface.
 
-![](http://i.imgur.com/Slbvt65.png)
+## Quick start
 
-Play online at http://ellisonleao.github.io/clumsy-bird/
+### Setup a project
+- Login to [Shipped-CiscoCloud](http://ciscocloud.github.io/)
+- Create a new project.
+- ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/createproject.png)
 
-## Running Locally
+- Select appropriate service type. for example for this project its Express JS
+- ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/selectservice.png)
+- Provide service name ( You can use existing git hub repository like as shown below)
+- ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/selectrepo.png)
+- Build Project 
+  - Build Newly created project.
+  - ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildproject.png)
+  - For Local build follow on screen command line instruction.
+  - ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildlocal.png)
+  - Wait until local build setup is completed 
+  - ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildstatus.png)
+  - Commit local build with empty commit just to know shipped that local build worked fine and this will trigger drone build for your project.
+  for eg. cd 'SampleProj/clumsy_bird'; git commit --allow-empty -m 'Setup Shipped' && git push origin master
+  - ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/pushbuild.png)
 
-- Install [Node](http://nodejs.org/download/) and [Grunt](http://gruntjs.com/)
-- Install the dependencies
-
-```
-npm install
-```
-
-Then just type on your shell:
-
-```
-grunt connect
-```
-
-Open your browser at `http://localhost:8001/`
-
-## Making your customization
-
-See [CUSTOMIZING](https://github.com/ellisonleao/clumsy-bird/blob/gh-pages/CUSTOMIZING.md)
-
-## Some nice games made with this project
-
-- **Campaja 404 page** - http://campanja.com/404/ (Wait 10 seconds before the game start)
-- **Clumsy Marlet** by [@amedeedaboville](http://github.com/amedeedaboville) - http://amedeedaboville.github.io/clumsy-martlet/
-- **Flappy Flamant** by [@leliondoc](http://github.com/leliondoc) - http://gruissan-mediterranee dot com/flappyflamant/
-- **Hungry Willbo** by [@dougdiehnelt](http://github.com/dougdiehnelt), [@ferentchak](http://github.com/ferentchak) [@willklein](http://github.com/willklein) and [@city41](http://github.com/city41) - http://hungrywillbo.com/
-- **Flappy Dragon** by [@sunzhuoshi](http://github.com/sunzhuoshi) - http://flappydragon.net
-- **BurguerFest** by [@PanManAms](http://github.com/panmanams) - http://burgerfest.nl
-- **Flappy Tom**  by [@jeshuamaxey](http://github.com/jeshuamaxey) - http://votetom.in/flappy-tom
-- **Clippy Jam** by [@jkeatinco](http://github.com/jkeatinco) - http://jkeatinco.github.io/
-- **Ducky momo** by [@codex8](http://github.com/codex8) - https://ilmtechlab.com/DuckyMomo/
-- **Derpy Duck** by [@EmmettTan](http://github.com/emmettTan) and [@TheOneAmir](http://github.com/theoneamir) - http://ahdavies.github.io/Derpy-Duck/
-- **Flippy Cat** (@Github's Game Off 2015 Winner) by [@t4nuj](http://github.com/t4nuj) - https://t4nuj.github.io/clumsy-bird
-
-If you made something with this code, please [share here](https://github.com/ellisonleao/clumsy-bird/wiki/Games-using-clumsy-bird-code) and i'll be happy to add your game into the list.
-
-Some thoughts about this code you can find on [my blog post](https://medium.com/@ellisonleao/clumsy-bird-an-open-source-flappy-bird-clone-cf615724730f).
+### Deploy
+- You can find available builds under Deploy tab. for example. 
+- ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/selectbuild.png)
+- Select desired build associated with each commit.
+- Create a new environment eg. Dev, Sagging, Beta, or Production 
+- ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/newenv.png)
+- Click on deploy button to deply selected build.
+- ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/deploy.png)
