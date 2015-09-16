@@ -1,9 +1,14 @@
 Clumsy Bird
 ===========
+A MelonJS made "Flappy Bird" clone.
 
-This is an sample project to demonstrate how to create/deploy a Node JS application using Shipped interface.
+![](http://i.imgur.com/Slbvt65.png)
 
-## Setting Up
+Play online at http://ellisonleao.github.io/clumsy-bird/
+
+## Setting Up on Shipped
+This is an sample project to demonstrate how to create/deploy a Node JS application using Shipped.
+
 ### Step 1. Set Up GitHub
 
 [Git](https://git-scm.com/) is a source and version control system hosted on the web, and [GitHub](https://github.com/) is a repository of Git projects. Shipped stores your projects on GitHub, and you'll need a GitHub account to use Shipped. If you already have a GitHub account, skip to step 2. Otherwise, navigate to the [GitHub home page](https://github.com/) using any modern browser (we recommend Chrome), click on [Sign up](https://github.com/join) and follow the instructions to create a free account. You don't need to do anything more with GitHub at this time; Shipped will do it all for you.
