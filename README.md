@@ -73,7 +73,7 @@ The bootstrap process runs in a command-line terminal window, so the first step 
 | Windows |	Click Start, type "cmd", and press Enter for a normal terminal window, or Ctrl+Shift+Enter for an Administrator terminal window. You will need an Administrator window if the bootstrap process needs to install Vagrant and VirtualBox. If you already have this software installed, you can use a normal terminal window. |
 
 
-### Step 8 Bootstrap Your Environment
+### Step 8 Bootstrap your environment
 
 When you completed creating your project in Step 6, Shipped popped up the Let's Get Set Up form containing the bootstrap command:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildlocal.Png)
@@ -87,6 +87,19 @@ and on the Shipped browser window, which displays a circular animation ticking o
 
 Among its other actions, the Shipped bootstrap process brings up a web server on a newly-created VM and uses it to run your application. The last few lines output on the terminal window show you Shipped is running the application:
 - ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/consoleout.Png)
+
+### Step 8.1 (OPTIONAL) Fast bootstrap your environment
+
+In case you dont this build to be deployed locally. you can opt for fast bootstrap option.
+
+you can set **-f** option during running your cli command inside terminal/console
+for example:
+
+shipped.exe -t FJLDKmsJvvoFlpVssIAYkbKrImXeovaV Local bootstrap 9c38dd91-5bdf-11e5-9640-0242ac110008 -f
+
+This flag will skip all the Vagrant related process in bootstrap. This means it stops after cloning the repository(s) and downloading files. you can still proceed with local commit to initiate a shipped build. 
+
+If we wants to build locally, we needs to bootstrap again.
 
 
 ## Build and Deploy the Application
