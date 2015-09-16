@@ -31,7 +31,7 @@ The development services listed are examples of what Shipped calls "microservice
 
 #### Step 5.1 Select a service type.
  
-For this project we will select "Express JS" which create Node JS VM
+For this project we will select **"Express JS"** which create Node JS VM
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/selectservice.Png)
 
 Click on the Select button to the right of this service. Shipped pops up the Service Configuration form that you'll use to specify the GitHub repository where Shipped will store the source code using the service:
@@ -75,7 +75,7 @@ The bootstrap process runs in a command-line terminal window, so the first step 
 
 ### Step 8 Bootstrap Your Environment
 
-When you completed creating your project in Step 4, Shipped popped up the Let's Get Set Up form containing the bootstrap command:
+When you completed creating your project in Step 6, Shipped popped up the Let's Get Set Up form containing the bootstrap command:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildlocal.Png)
 
 
