@@ -9,7 +9,8 @@ This is an sample project to demonstrate how to create/deploy a Node JS applicat
 [Git](https://git-scm.com/) is a source and version control system hosted on the web, and [GitHub](https://github.com/) is a repository of Git projects. Shipped stores your projects on GitHub, and you'll need a GitHub account to use Shipped. If you already have a GitHub account, skip to step 2. Otherwise, navigate to the [GitHub home page](https://github.com/) using any modern browser (we recommend Chrome), click on [Sign up](https://github.com/join) and follow the instructions to create a free account. You don't need to do anything more with GitHub at this time; Shipped will do it all for you.
 
 ### Step 2. Login to Shipped
-Your GitHub account is all you need to login to Shipped. Navigate to the [Shipped welcome page]([Shipped](http://ciscocloud.github.io/) and click on the big green "Sign up with GitHub" button. 
+Your GitHub account is all you need to login to Shipped. Navigate to the [Shipped welcome page](http://ciscocloud.github.io/) and click on the big green "Sign up with GitHub" button. 
+
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/home.Png)
 
 Shipped displays its home page. If this is your first time in Shipped, it automatically pops up the Create Your Project dialog. If not, select Create New Project from the Your Projects dropdown to get the popup:
