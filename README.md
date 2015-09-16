@@ -14,7 +14,6 @@ Your GitHub account is all you need to login to Shipped. Navigate to the [Shippe
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/home.Png)
 
 Shipped displays its home page. If this is your first time in Shipped, it automatically pops up the Create Your Project dialog. If not, select Create New Project from the Your Projects dropdown to get the popup:
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/createproject.Png)
 
 ## Create Your Clumsy-bird Project with Shipped
 
