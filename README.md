@@ -86,9 +86,12 @@ and on the Shipped browser window, which displays a circular animation ticking o
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildstatus.Png)
 
 Among its other actions, the Shipped bootstrap process brings up a web server on a newly-created VM and uses it to run your application. The last few lines output on the terminal window show you Shipped is running the application:
-- ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/consoleout.Png)
+![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/consoleout.Png)
 
-### Step 8.1 (OPTIONAL) Fast bootstrap your environment
+#### OR
+
+
+### Step 8.1 (*optional) Fast bootstrap your environment
 
 In case you dont this build to be deployed locally. you can opt for fast bootstrap option.
 
