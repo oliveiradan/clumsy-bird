@@ -49,12 +49,13 @@ This form allow us to specify:
 | GitHub Organization|	The GitHub account owning the repository. This can be your personal account, or the account of a company or organization associated with your account. |
 | Private Public	The type of repository to create | private (available only to specific GitHub users) or public (viewable by any web user). You need a paid GitHub account to create a private repository.|
  
-#### Step 5.3 Initiate Build process.
+
+ 
+### Step 6. Build Your Project
+#### Step 6.1 Initiate Build process.
  
  Specify "clumsy-bird" for the repository name and press Add Service. Shipped re-displays the Compose Your Project form with the repository name for the selected service above the Build Project button.
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildproject.Png)
- 
-### Step 6. Build Your Project
 
 To build your project, press the Build Project button. The button label changes to Building, and a status bar moves across the button while Shipped creates your GitHub repository and stores the description of your project in its database. When it's finished, it pops up the Let's Get Set Up form containing the command to bootstrap the project on your computer:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildlocal.Png)
@@ -62,7 +63,7 @@ To build your project, press the Build Project button. The button label changes 
 ## Bootstrap Your Local Development Environment
 Bootstrapping a Shipped project means downloading the project's source code to your machine; setting up a local Git repository tied to the cloud-based repository created by Shipped; installing the pre-requisite software Vagrant and VirtualBox (if necessary); creating and the virtual machines that host your development environment; setting up a continuous integration build; and brings up a web server running the new application. The process is fully automatic; you just need to copy and paste the command presented by Shipped when you created the project.
 
-### Step 7 Open a Terminal Window
+### Step 7.1 Bootstrap your environment (Refer 7.2 for fast bootstrap)
 
 The bootstrap process runs in a command-line terminal window, so the first step in bootstrapping your project is opening a terminal window. The way you do this depends on your operating system:
 
@@ -71,9 +72,6 @@ The bootstrap process runs in a command-line terminal window, so the first step 
 | OS X (Mac)|	Press Command + Space to open Spotlight Search. Type Terminal and double-click the Terminal Application. Menu option Shell -> New Window will open a new window for you. |
 | Ubuntu |	Press Ctrl+Alt+T |
 | Windows |	Click Start, type "cmd", and press Enter for a normal terminal window, or Ctrl+Shift+Enter for an Administrator terminal window. You will need an Administrator window if the bootstrap process needs to install Vagrant and VirtualBox. If you already have this software installed, you can use a normal terminal window. |
-
-
-### Step 8 Bootstrap your environment
 
 When you completed creating your project in Step 6, Shipped popped up the Let's Get Set Up form containing the bootstrap command:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildlocal.Png)
@@ -91,7 +89,7 @@ Among its other actions, the Shipped bootstrap process brings up a web server on
 #### OR
 
 
-### Step 8.1 (*optional) Fast bootstrap your environment
+### Step 7.2 (*optional) Fast bootstrap your environment
 
 In case you dont this build to be deployed locally. you can opt for fast bootstrap option.
 
@@ -109,7 +107,7 @@ If we wants to build locally, we needs to bootstrap again.
 
 ## Build and Deploy the Application
 
-### Step 9 Run a Build
+### Step 8 Run a Build
 
 Among the tasks Shipped performed during bootstrap was to store the application's source code in a local Git repository tied to the Git repository in the cloud, and set up a continuous integration build, so that any commit to the repository automatically triggers a build. When the bootstrap process completes, the Shipped browser window displays the command you need to run your first build:
 
@@ -119,16 +117,16 @@ Once again, select the command by clicking on it, copy and paste it into your te
 
 This automatically triggers a build, you see this in event section at your browser window
 
-### Step 10 Deploy Your Project to the Cloud
+### Step 9 Deploy Your Project to the Cloud
 
 The last step in the bootstrap process is deploying your project's application to the Cisco cloud. To do this, click on the Deploy tab at the top left of the screen. Shipped displays the Deploy tab with a message that there are currently no deployed environments:
 
-#### Step 10.1 Create environment.
+#### Step 9.1 Create environment.
 Create a new Environment as 
 
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/newenv.Png)
 
-#### Step 10.2 Deploy to environment.
+#### Step 9.2 Deploy to environment.
 Shipped shows the message "Deploying to environment..." under the environment name. please click on that , and a short time later replaces it with a "Deployed successfully" message:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/deploy.Png)
 
