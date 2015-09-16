@@ -92,10 +92,12 @@ Among its other actions, the Shipped bootstrap process brings up a web server on
 
 In case you dont this build to be deployed locally. you can opt for fast bootstrap option.
 
-you can set **-f** option during running your cli command inside terminal/console
+you can set **fast** option while running your cli command inside terminal/console
 for example:
 
-shipped.exe -t FJLDKmsJvvoFlpVssIAYkbKrImXeovaV Local bootstrap 9c38dd91-5bdf-11e5-9640-0242ac110008 -f
+shipped.exe -t FJLDKmsJvvoFlpVssIAYkbKrImXeovaV Local bootstrap 9c38dd91-5bdf-11e5-9640-0242ac110008 fast
+
+![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/fastbuild.Png)
 
 This flag will skip all the Vagrant related process in bootstrap. This means it stops after cloning the repository(s) and downloading files. you can still proceed with local commit to initiate a shipped build. 
 
