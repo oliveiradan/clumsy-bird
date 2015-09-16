@@ -10,7 +10,7 @@ This is an sample project to demonstrate how to create/deploy a Node JS applicat
 
 ### Step 2. Login to Shipped
 Your GitHub account is all you need to login to Shipped. Navigate to the [Shipped welcome page]([Shipped](http://ciscocloud.github.io/) and click on the big green "Sign up with GitHub" button. 
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/welcome.Png)
+![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/home.Png)
 
 Shipped displays its home page. If this is your first time in Shipped, it automatically pops up the Create Your Project dialog. If not, select Create New Project from the Your Projects dropdown to get the popup:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/createproject.Png)
@@ -90,7 +90,7 @@ Among its other actions, the Shipped bootstrap process brings up a web server on
 
 Among the tasks Shipped performed during bootstrap was to store the application's source code in a local Git repository tied to the Git repository in the cloud, and set up a continuous integration build, so that any commit to the repository automatically triggers a build. When the bootstrap process completes, the Shipped browser window displays the command you need to run your first build:
 
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/pushbuild.png)
+![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/pushbuild.Png)
 
 Once again, select the command by clicking on it, copy and paste it into your terminal window. The command changes the directory to the one containing your new local Git repository and commits the initial copy of the application source to your cloud-based remote Git repository
 
