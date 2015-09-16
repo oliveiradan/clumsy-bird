@@ -29,10 +29,13 @@ Enter a name for your project (we'll use "Sample" for this project) and press St
 ### Step 5 Add a service
 The development services listed are examples of what Shipped calls "microservices" - supporting services used by a project. We can choose as many microservices as needed for a project. Shipped installs whatever is needed to deploy the selected microservices on one of the VMs it creates for you. 
 
+ #### Step 5.1 Select a service type
 For this project we will select "Express JS" which create Node JS VM
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/selectservice.Png)
 
 Click on the Select button to the right of this service. Shipped pops up the Service Configuration form that you'll use to specify the GitHub repository where Shipped will store the source code using the service:
+ 
+ #### Step 5.2 Provide github repository name 
 
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/selectrepo.Png)
 
@@ -44,6 +47,8 @@ This form allow us to specify:
 | Name of GitHub Repository|	The name of the GitHub repository where Shipped stores the source code using this service. Shipped automatically creates the repository if necessary|
 | GitHub Organization|	The GitHub account owning the repository. This can be your personal account, or the account of a company or organization associated with your account. |
 | Private Public	The type of repository to create | private (available only to specific GitHub users) or public (viewable by any web user). You need a paid GitHub account to create a private repository.|
+ 
+ #### Step 5.3 Initiate Build process.
  
  Specify "clumsy-bird" for the repository name and press Add Service. Shipped re-displays the Compose Your Project form with the repository name for the selected service above the Build Project button.
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildproject.Png)
@@ -65,7 +70,6 @@ The bootstrap process runs in a command-line terminal window, so the first step 
 | OS X (Mac)|	Press Command + Space to open Spotlight Search. Type Terminal and double-click the Terminal Application. Menu option Shell -> New Window will open a new window for you. |
 | Ubuntu |	Press Ctrl+Alt+T |
 | Windows |	Click Start, type "cmd", and press Enter for a normal terminal window, or Ctrl+Shift+Enter for an Administrator terminal window. You will need an Administrator window if the bootstrap process needs to install Vagrant and VirtualBox. If you already have this software installed, you can use a normal terminal window. |
-
 
 
 ### Step 8 Bootstrap Your Environment
@@ -100,11 +104,12 @@ This automatically triggers a build, you see this in event section at your brows
 
 The last step in the bootstrap process is deploying your project's application to the Cisco cloud. To do this, click on the Deploy tab at the top left of the screen. Shipped displays the Deploy tab with a message that there are currently no deployed environments:
 
+ #### Step 10.1 Create environment.
 Create a new Environment as 
 
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/newenv.Png)
 
-
+ #### Step 10.2 Deploy to environment.
 Shipped shows the message "Deploying to environment..." under the environment name. please click on that , and a short time later replaces it with a "Deployed successfully" message:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/deploy.Png)
 
