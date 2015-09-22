@@ -7,68 +7,112 @@ A MelonJS made "Flappy Bird" clone.
 Play online at http://ellisonleao.github.io/clumsy-bird/
 
 ## Setting Up on Shipped
-This is an sample project to demonstrate how to create/deploy a Node JS application using Shipped.
+This is an sample project to demonstrate how to create and deploy a Shipped project from an existing GitHub repository.  For this example, we'll use Clumsy Bird, a Node.js port of Flappy Bird.
 
 ### Step 1. Set Up GitHub
 
 [Git](https://git-scm.com/) is a source and version control system hosted on the web, and [GitHub](https://github.com/) is a repository of Git projects. Shipped stores your projects on GitHub, and you'll need a GitHub account to use Shipped. If you already have a GitHub account, skip to step 2. Otherwise, navigate to the [GitHub home page](https://github.com/) using any modern browser (we recommend Chrome), click on [Sign up](https://github.com/join) and follow the instructions to create a free account. You don't need to do anything more with GitHub at this time; Shipped will do it all for you.
 
-### Step 2. Login to Shipped
-Your GitHub account is all you need to login to Shipped. Navigate to the [Shipped welcome page](http://shipped-cisco.com) and click on the big green "Sign up with GitHub" button. 
-
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/home.Png)
-
 Shipped displays its home page. If this is your first time in Shipped, it automatically pops up the Create Your Project dialog. If not, select Create New Project from the Your Projects dropdown to get the popup:
 
-## Create Your Clumsy-bird Project with Shipped
+### Step 2 Fork the Clumsy Bird project
+Fork CiscoCloud/clumsy-bird as your repository master project branch.  This sets up Clumsy Bird as the sample repository that you'll use for you Shipped project.
 
-### Step 3 Compose Your Project
-Use any modern browser (we recommend Chrome) to navigate to the the Shipped welcome page. If you're not logged, click on the big green "Sign up with GitHub" button to login. If this is your first project, Shipped automatically pops up a Create New Project form; if not, select Create New Project from the Your Projects dropdown to get the popup:
+![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/fork.Png)
+
+### Step 3 Download the Shipped CLI
+You can compose a Shipped project either with the Shipped web UI at [http://shipped-cisco.com](http://shipped-cisco.com) or with the Shipped CLI.  However, even if you compose your project online, you'll still need the CLI to bootstrap it to your local laptop, so the first step in using Shipped is to download the CLI.  Download from the appropriate link below:
+
+OS | Download URL
+---- | -------------------
+linux | https://bintray.com/artifact/download/shippedrepos/shipped-cli/linux/shipped (5.9 MB)
+linux (compressed) | https://bintray.com/artifact/download/shippedrepos/shipped-cli/linux/shipped.gz (1.7 MB)
+mac | https://bintray.com/artifact/download/shippedrepos/shipped-cli/mac/shipped (6.3 MB)
+mac (compressed) | https://bintray.com/artifact/download/shippedrepos/shipped-cli/mac/shipped.gz (1.8 MB)
+windows | https://bintray.com/artifact/download/shippedrepos/shipped-cli/windows/shipped.exe (6 MB)
+windows (compressed) | https://bintray.com/artifact/download/shippedrepos/shipped-cli/windows/shipped.zip (1.7 MB)
+
+The compressed links contain the same executables as the standard lins, but may take less time to download.  Once you've downloaded an executable, copy it to a directory in your path.
+
+### Step 4 Compose and Deploy your Project with the Shipped CLI
+This step explains how to compose and deploy your project entirely with the Shipped CLI.  If you'd prefer to use the web UI, skip this step and go to Step 5.
+
+To compose your project with the Shipped CLI, first open a terminal window:
+
+| Os Type | Action          |
+| ------------------- | -------------------- |
+| OS X (Mac)|	Press Command + Space to open Spotlight Search. Type Terminal and double-click the Terminal Application. Menu option Shell -> New Window will open a new window for you. |
+| Ubuntu |	Press Ctrl+Alt+T |
+| Windows |	Click Start, type "cmd", and press Enter for a normal terminal window, or Ctrl+Shift+Enter for an Administrator terminal window. You will need an Administrator window if the bootstrap process needs to install Vagrant and VirtualBox. If you already have this software installed, you can use a normal terminal window. |
+
+Once you have the terminal window open, enter the following command:
+
+    shipped run create-and-deploy project=MyProject service=clumsy-bird framework=express [fast="--fast"]
+
+This command is all you need to create your project and deploy it to the Cloud!  Use the **project** argument to provide a name for your project (you can call it anything you want); specify the **service** and **framework** arguments exactly as shown; and specify the optional **fast="--fast"** argument to suppress building a VM on your laptop for local deployment.
+
+This command does the following:
+
+* Creates the project and service in the Shipped database
+* Sets up a remote GitHub repository in the Cloud
+* Sets up a continuous integration (CI) build that rebuilds your project automatically after every commit
+* Downloads project source code into a local Git repository on your laptop
+* If necessary, installs prerequisite software (Vagrant and Virtualbox)
+* Optionally creates a VM on your laptop to build and run the service
+* Makes a commit to the Git repository that starts the first build
+* Sets up a cloud environment where you can deploy your project
+* Waits for the build to complete and deploys the project to the cloud
+
+Once it completes, you'll have the Clumsy Bird application running both on your laptop and in the cloud.  That's how easy it is to get started with Shipped!
+
+### Step 5. Compose and Deploy Your Project with the Shipped UI
+If you've composed your project with the CLI, you can skip this step.  However, if you prefer to compose your project online - or would just like to see how it's down - just use any modern browser (we recommend Chrome) to navigate to the [Shipped welcome page](http://shipped-cisco.com). 
+
+![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/home.Png) 
+#### Step 5.1 Login to Shipped
+Your GitHub account is all you need to login to Shipped, so click on the big green "Sign up with GitHub" button.   
+
+If this is your first project, Shipped automatically pops up a Create New Project form; if not, select Create New Project from the Your Projects dropdown to get the popup:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/createproject.Png)
 
 Enter a name for your project (we'll use "Sample" for this project) and press Start Composing. Shipped displays a list of development services:
-### Step 4 Fork the Github project
-#### Fork CiscoCloud/clumsy-bird as your repository master project branch.
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/fork.Png)
 
-### Step 5 Add a service
+#### Step 5.2 Add a service
 The development services listed are examples of what Shipped calls "microservices" - supporting services used by a project. We can choose as many microservices as needed for a project. Shipped installs whatever is needed to deploy the selected microservices on one of the VMs it creates for you. 
-
-#### Step 5.1 Select a service type.
  
-For this project we will select **"Express JS"** which create Node JS VM
+For this project we will select **Express JS** which create a Nod.js VM with everything needed to build and run an ExpressJS project like Clumsy Bird.
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/selectservice.Png)
 
-Click on the Select button to the right of this service. Shipped pops up the Service Configuration form that you'll use to specify the GitHub repository where Shipped will store the source code using the service:
+Click on the Select button to the right of this service. Shipped pops up the Service Configuration form that you'll use to specify the GitHub repository where Shipped stores the source code using the service:
  
-#### Step 5.2 Provide github repository name. 
-
+#### Step 5.3 Provide the GitHub repository name. 
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/selectrepo.Png)
-
 
 This form allow us to specify:
 
 | Name | Description          |
 | ------------------- | -------------------- |
-| Name of GitHub Repository|	The name of the GitHub repository where Shipped stores the source code using this service. Shipped automatically creates the repository if necessary|
-| GitHub Organization|	The GitHub account owning the repository. This can be your personal account, or the account of a company or organization associated with your account. |
-| Private Public	The type of repository to create | private (available only to specific GitHub users) or public (viewable by any web user). You need a paid GitHub account to create a private repository.|
+| Name of GitHub Repository|	The name of the GitHub repository where Shipped stores the source code using this service. Shipped automatically creates the repository if necessary.  *For this example, we'll use the repository you forked in Step 2 and specify clumsy-bird for the repository name.* |
+| GitHub Organization|	The GitHub account owning the repository. This can be your personal account, or the account of a company or organization associated with your account.  *For this example, specify the account where you forked the clumsy-bird repository.* |
+| Private Public |	The type of repository to create.  Private repositories are available only to specific GitHub users; public repositories are viewable by any web user. You need a paid GitHub account to create a private repository.  *For this example, specify Public, as your fork of a public repository must also be public.*  |
  
-
+#### Step 5.4 Build Your Project
  
-### Step 6. Build Your Project
-#### Step 6.1 Initiate Build process.
- 
- Specify "clumsy-bird" for the repository name and press Add Service. Shipped re-displays the Compose Your Project form with the repository name for the selected service above the Build Project button.
+Specify "clumsy-bird" for the repository name and press Add Service. Shipped re-displays the Compose Your Project form with the repository name for the selected service above the Build Project button.
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildproject.Png)
 
 To build your project, press the Build Project button. The button label changes to Building, and a status bar moves across the button while Shipped creates your GitHub repository and stores the description of your project in its database. When it's finished, it pops up the Let's Get Set Up form containing the command to bootstrap the project on your computer:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildlocal.Png)
 
-## Bootstrap Your Local Development Environment
-Bootstrapping a Shipped project means downloading the project's source code to your machine; setting up a local Git repository tied to the cloud-based repository created by Shipped; installing the pre-requisite software Vagrant and VirtualBox (if necessary); creating and the virtual machines that host your development environment; setting up a continuous integration build; and brings up a web server running the new application. The process is fully automatic; you just need to copy and paste the command presented by Shipped when you created the project.
+#### Step 5.5 Bootstrap Your Local Development Environment
+Bootstrapping a Shipped project means:
 
-### Step 7.1 Bootstrap your environment (Refer 7.2 for fast bootstrap)
+-  Downloads the project's source code to your machine
+-  Sets up a local Git repository tied to the cloud-based repository created by Shipped
+-  If necessary, installs the prerequisite software Vagrant and VirtualBox
+-  Optionally creates the virtual machines that host your development environment
+
+The process is fully automatic; you just need to copy and paste the command presented by Shipped when you created the project.
 
 The bootstrap process runs in a command-line terminal window, so the first step in bootstrapping your project is opening a terminal window. The way you do this depends on your operating system:
 
@@ -78,62 +122,37 @@ The bootstrap process runs in a command-line terminal window, so the first step 
 | Ubuntu |	Press Ctrl+Alt+T |
 | Windows |	Click Start, type "cmd", and press Enter for a normal terminal window, or Ctrl+Shift+Enter for an Administrator terminal window. You will need an Administrator window if the bootstrap process needs to install Vagrant and VirtualBox. If you already have this software installed, you can use a normal terminal window. |
 
-When you completed creating your project in Step 6, Shipped popped up the Let's Get Set Up form containing the bootstrap command:
+When you completed creating your project in the previous step, Shipped popped up the Let's Get Set Up form containing commands to download the CLI and bootstrap your project:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildlocal.Png)
 
+Since you already downloaded the Shipped CLI in Step 3, you only need to copy the second command and paste it into your terminal window.
 
-Execute these command in console/terminal.
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/console.Png)
+If you don't want to create a VM hosting your development environment, append the argument **--fast** to the end of this line.  This saves two or three minutes of bootstrap time, but skips local deployment of the project.  If you choose this option, you can create the VM at a later time by rerunning the bootstrap command without **--fast**.
 
-and on the Shipped browser window, which displays a circular animation ticking off each step in the bootstrap process as it happens:
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildstatus.Png)
+Press Enter to start the bootstrap process.  While bootstrap runs, the Shipped UI displays a circular animation ticking off each step in the bootstrap process as it happens:
+![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/buildstatus.Png) 
 
-Among its other actions, the Shipped bootstrap process brings up a web server on a newly-created VM and uses it to run your application. The last few lines output on the terminal window show you Shipped is running the application:
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/consoleout.Png)
+#### Step 5.6 Run a Build
 
-#### OR
-
-
-### Step 7.2 (*optional) Fast bootstrap your environment
-
-In case you dont this build to be deployed locally. you can opt for fast bootstrap option.
-
-you can set **fast** option while running your cli command inside terminal/console
-for example:
-
-shipped.exe -t FJLDKmsJvvoFlpVssIAYkbKrImXeovaV Local bootstrap 9c38dd91-5bdf-11e5-9640-0242ac110008 fast
-
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/fastbuild.Png)
-
-This flag will skip all the Vagrant related process in bootstrap. This means it stops after cloning the repository(s) and downloading files. you can still proceed with local commit to initiate a shipped build. 
-
-If we wants to build locally, we needs to bootstrap again.
-
-
-## Build and Deploy the Application
-
-### Step 8 Run a Build
-
-Among the tasks Shipped performed during bootstrap was to store the application's source code in a local Git repository tied to the Git repository in the cloud, and set up a continuous integration build, so that any commit to the repository automatically triggers a build. When the bootstrap process completes, the Shipped browser window displays the command you need to run your first build:
-
+When you created the project, Shipped both set up a GitHub repository in the cloud and set up a continuous integration (CI) build, so that any commit to the repository automatically triggers a build.  When you bootstrapped the project, Shipped stored the application's source code in a local Git repository tied to the GitHub repository.  To start a build, all you need to is commit changes to the GitHub repository.  When the bootstrap process completes, the Shipped browser window displays the command you need to run your first build:
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/pushbuild.Png)
 
-Once again, select the command by clicking on it, copy and paste it into your terminal window. The command changes the directory to the one containing your new local Git repository and commits the initial copy of the application source to your cloud-based remote Git repository
+Once again, select the command by clicking on it and copy and paste it into your terminal window. The command changes the directory to the one containing your new local Git repository and commits the initial copy of the application source to your cloud-based remote Git repository.
 
-This automatically triggers a build, you see this in event section at your browser window
+This automatically triggers a build, as you can in event section at your browser window
 
-### Step 9 Deploy Your Project to the Cloud
+#### Step 5.7 Create an Environment to Deploy Your Project to the Cloud
 
 The last step in the bootstrap process is deploying your project's application to the Cisco cloud. To do this, click on the Deploy tab at the top left of the screen. Shipped displays the Deploy tab with a message that there are currently no deployed environments:
 
-#### Step 9.1 Create environment.
-Create a new Environment as 
+Create a new Environment by clicking on the New Environment button in the upper right corner of the form.  Shipped displays the New Environment form:
 
 ![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/newenv.Png)
 
-#### Step 9.2 Deploy to environment.
-Shipped shows the message "Deploying to environment..." under the environment name. please click on that , and a short time later replaces it with a "Deployed successfully" message:
-![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/deploy.Png)
+Specify a name for your environment and click Add Environment.
 
+#### Step 5.8 Deploy Your Project to the  Environment.
+Click on the build in the Select Build column, the environment in the Select Environment column, and then on the Deploy Build button.  Shipped shows the message "Deploying to environment..." under the environment name, and a short time later replaces it with a "Deployed successfully" message:
+![](https://github.com/CiscoCloud/clumsy-bird/blob/Deploy/images/deploy.Png)
 
 Congratulations! You've deployed your clumsy-bird application to the cloud. Click on the URL in the "Deployed successfully" message to see the application running in its new environment
