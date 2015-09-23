@@ -1,16 +1,12 @@
-Clumsy Bird
-===========
-A MelonJS made "Flappy Bird" clone.
+#A Shipped Clumsy Bird 
+
+This is an sample application to demonstrate how to create and deploy a Shipped project from an existing GitHub repository.  This example is Clumsy Bird, a MelonJS port of of the famous Flappy Bird mobile application. 
 
 ![](http://i.imgur.com/Slbvt65.png)
 
-Play online at http://ellisonleao.github.io/clumsy-bird/
-
 ## Setting Up on Shipped
-This is an sample project to demonstrate how to create and deploy a Shipped project from an existing GitHub repository.  For this example, we'll use Clumsy Bird, a Node.js port of Flappy Bird.
 
-### Step 1. Set Up GitHub
-
+### Step 1. Get a GitHub Account
 [Git](https://git-scm.com/) is a source and version control system hosted on the web, and [GitHub](https://github.com/) is a repository of Git projects. Shipped stores your projects on GitHub, and you'll need a GitHub account to use Shipped. If you already have a GitHub account, skip to step 2. Otherwise, navigate to the [GitHub home page](https://github.com/) using any modern browser (we recommend Chrome), click on [Sign up](https://github.com/join) and follow the instructions to create a free account. You don't need to do anything more with GitHub at this time; Shipped will do it all for you.
 
 ### Step 2 Fork the Clumsy Bird project
@@ -68,6 +64,14 @@ This command does the following:
 * Waits for the build to complete and deploys the project to the cloud
 
 Once it completes, you'll have the Clumsy Bird application running both on your laptop and in the cloud.  That's how easy it is to get started with Shipped!
+
+Create-and-deploy is an example of a Shipped CLI script that runs several CLI commands in succession.  You can see the contents of the script with the command:
+
+    shipped script list create-and-deploy
+
+The commands in the script perform the same tasks as the Shipped UI actions described in the next step.  You can get an overview of some CLI commands by following along with the script as you read through the next step.  For more detailed documentation on the CLI, use its help command,
+
+    shipped help
 
 ### Step 5. Compose and Deploy Your Project with the Shipped UI
 If you've composed your project with the CLI, you can skip this step.  However, if you prefer to compose your project online - or would just like to see how it's done - just use any modern browser (we recommend Chrome) to navigate to the [Shipped welcome page](http://shipped-cisco.com). 
