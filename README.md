@@ -1,6 +1,6 @@
 #A Shipped Clumsy Bird 
 
-This is an sample application to demonstrate how to create and deploy a Shipped project from an existing GitHub repository.  This example is Clumsy Bird, a MelonJS port of of the famous Flappy Bird mobile application. 
+This sample application demonstrates creating and deploying a Shipped project from an existing GitHub repository.  This example is Clumsy Bird, a MelonJS port of of the famous Flappy Bird mobile application. 
 
 ![](http://i.imgur.com/Slbvt65.png)
 
